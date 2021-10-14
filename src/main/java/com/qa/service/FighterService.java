@@ -8,7 +8,7 @@ public interface FighterService {
 	
 	public Fighter getFigtherByIndex(Integer id);
 	
-	public Fighter getFigtherByName(String name);
+	public List<Fighter> getFigtherByName(String name);
 	
 	public List<Fighter> getAllFighters();
 	
