@@ -8,6 +8,8 @@ public interface FighterService {
 	
 	public Fighter getFigtherByIndex(Integer id);
 	
+	public Fighter getFigtherByName(String name);
+	
 	public List<Fighter> getAllFighters();
 	
 	public Fighter createFighter(Fighter fighter);
