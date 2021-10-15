@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.qa.data.Fighter;
+import com.qa.exception.FighterNotFoundException;
 import com.qa.repo.FighterRepo;
 
 @Primary
@@ -22,7 +23,7 @@ public class FighterServiceDB implements FighterService {
 
 	@Override
 	public Fighter getFigtherByIndex(Integer id) {
-		return this.repo.findById(id).orElseThrow(null);
+		return this.repo.findById(id).orElseThrow(FighterNotFoundException::new);
 	}
 
 	@Override
