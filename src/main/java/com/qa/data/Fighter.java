@@ -1,5 +1,7 @@
 package com.qa.data;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -94,6 +96,26 @@ public class Fighter {
 
 	public void setMeleeskill(Integer meleeskill) {
 		this.meleeskill = meleeskill;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(armour, defence, health, id, meleeskill, name, weapon);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Fighter other = (Fighter) obj;
+		return Objects.equals(armour, other.armour) && Objects.equals(defence, other.defence)
+				&& Objects.equals(health, other.health) && Objects.equals(id, other.id)
+				&& Objects.equals(meleeskill, other.meleeskill) && Objects.equals(name, other.name)
+				&& Objects.equals(weapon, other.weapon);
 	}
 
 }
