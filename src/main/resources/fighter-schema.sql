@@ -1,8 +1,11 @@
-drop table if exists marsupial CASCADE;
-create table marsupial
+drop table if exists fighter CASCADE;
+create table fighter
  (
  	id integer primary key auto_increment,
- 	colour varchar(255),
  	name varchar(255),
- 	species varchar(255)
+ 	armour varchar(255),
+ 	weapon varchar(255),
+    health Integer(3),
+    defence Integer(3),
+    meleeskill Integer(3)
  );
