@@ -16,7 +16,7 @@ public interface FighterService {
 	
 	public Fighter updateFighter(Fighter fighter, Integer id);
 	
-	public void deleteFighter(Integer id);
+	public boolean deleteFighter(Integer id);
 	
 	
 
